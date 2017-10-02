@@ -1,0 +1,21 @@
+{
+  "name": "node-learn-async",
+  "version": "1.0.0",
+  "description": "Repo to learn more about async js and its families",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "async",
+    "node",
+    "learn"
+  ],
+  "author": "evaizee",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "express": "^4.16.1",
+    "mysql": "^2.14.1"
+  }
+}
