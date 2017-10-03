@@ -1,7 +1,8 @@
-var express   =    require("express");
-var mysql     =    require('mysql');
-var app       =    express();
-var async = require('async');
+var express   = require("express");
+var mysql     = require('mysql');
+var express   = require('express')
+var app 	  = express();
+var async 	  = require('async');
 /*
 var connection = mysql.createConnection({
 	host     : '10.10.10.54',
@@ -26,7 +27,9 @@ function divide(a, b) {
 	return total;
 }
 
-async.waterfall(
+app.get('/waterfall', function (req, res) {
+
+	async.waterfall(
     [
         function(callback) {
         	var num1 = 3;
@@ -44,10 +47,14 @@ async.waterfall(
         function(argument, callback) {
         	console.log('tes '+argument);
         	callback(null, argument);
-        }
+        },
     ],
     function (err, caption) {
         console.log(caption);
+        res.send(200, caption);
+        //res.send(caption);
         // Node.js and JavaScript Rock!
-    }
-);
+    });
+});
+
+app.listen(3000);
